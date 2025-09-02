@@ -1,40 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Warehouse Management System
 
-## Getting Started
+A modern, responsive web application for intelligent warehouse and inventory management with advanced capabilities.
 
-First, run the development server:
+## ✨ Features
 
-```bash
+- Product and inventory management
+- Detailed analytical and statistical reports
+- User management system with different access levels
+- Fully responsive design for all devices
+- Modern UI with smooth animations
+- RTL support for Persian language
+
+## 🛠️ Technologies Used
+
+- **Next.js** - React framework for production
+- **React** - UI library
+- **React Icons** - Beautiful icon set
+- **CSS Modules** - Modular styling
+- **Font Awesome** - Vector icons
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/warehouse-management.git
+
+ment.git
+
+2. Install dependencies:
+
+
+cd warehouse-management
+npm install
+
+3. Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+📦 Build for Production
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+npm run build
+npm start
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎨 Key Components
+Homepage with Hero section and CTA
 
-## Learn More
+Features section
 
-To learn more about Next.js, take a look at the following resources:
+Animated statistics counter
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Call-to-Action section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Footer
 
-## Deploy on Vercel
+📱 Responsiveness
+The application is fully optimized for mobile, tablet, and desktop devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🤝 Contributing
+Fork the project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Create your feature branch (git checkout -b feature/amazing-feature)
+
+Commit your changes (git commit -m 'Add amazing feature')
+
+Push to the branch (git push origin feature/amazing-feature)
+
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👥 Developers
+[Your Name] - [Your Email] - [Your GitHub Profile]
+
+🙏 Acknowledgments
+Thanks to the following open-source libraries and tools:
+
+Next.js
+
+React
+
+React Icons
+
+Font Awesome
