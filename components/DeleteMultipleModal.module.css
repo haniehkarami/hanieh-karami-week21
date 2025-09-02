@@ -1,0 +1,276 @@
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modalBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.2),
+      0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .modalHeader h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .modalBody {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modalText {
+    font-size: 18px;
+    color: #2d3748;
+    text-align: center;
+    line-height: 1.6;
+    margin: 15px 0 10px 0;
+    font-weight: 500;
+  }
+  
+  .warningText {
+    color: #e53e3e;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+  }
+  
+  .modalFooter {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .modalButton {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+  }
+  
+  .modalButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modalButton:active {
+    transform: translateY(0);
+  }
+  
+  .modalButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  .deleteButton {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  }
+  
+  .deleteButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff5252 0%, #e53935 100%);
+    box-shadow: 0 6px 20px rgba(255, 82, 82, 0.4);
+  }
+  
+  .cancelButton {
+    background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(160, 174, 192, 0.3);
+  }
+  
+  .cancelButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+    box-shadow: 0 6px 20px rgba(113, 128, 150, 0.4);
+  }
+  
+  .deleteWarning {
+    font-size: 60px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .closeButton:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: rotate(90deg);
+  }
+  
+  .loadingSpinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      backdrop-filter: blur(0px);
+    }
+    to {
+      opacity: 1;
+      backdrop-filter: blur(4px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .modalContainer {
+      padding: 20px;
+      backdrop-filter: blur(2px);
+    }
+    
+    .modalBox {
+      width: 95%;
+      padding: 25px 20px;
+      margin: 0;
+    }
+    
+    .modalHeader h2 {
+      font-size: 20px;
+    }
+    
+    .modalText {
+      font-size: 16px;
+    }
+    
+    .modalFooter {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .modalButton {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      min-width: unset;
+    }
+    
+    .deleteWarning {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    
+    .closeButton {
+      top: 15px;
+      right: 15px;
+      font-size: 20px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modalBox {
+      border-radius: 16px;
+      padding: 20px 15px;
+    }
+    
+    .modalHeader h2 {
+      font-size: 18px;
+    }
+    
+    .modalText {
+      font-size: 15px;
+    }
+    
+    .deleteWarning {
+      font-size: 45px;
+    }
+  }

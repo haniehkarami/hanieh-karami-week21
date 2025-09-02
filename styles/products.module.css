@@ -1,0 +1,440 @@
+.container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Vazir', sans-serif;
+  direction: rtl;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 16px 24px; /* اصلاح: 16x به 16px */
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0; /* اضافه کردن border */
+  border-radius: 8px; /* اضافه کردن border-radius */
+  transition: all 0.3s ease;
+}
+
+.searchBox:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.searchIcon {
+  margin-left: 8px;
+  color: #64748b;
+}
+
+.searchBox input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #334155;
+  font-size: 16px;
+  font-family: 'Vazir', sans-serif;
+}
+
+.searchBox input::placeholder {
+  color: #94a3b8;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* استفاده از gap به جای marginهای جداگانه */
+}
+
+.userDivider {
+  width: 1px;
+  height: 30px;
+  background: #e2e8f0;
+}
+
+.userInfo svg {
+  font-size: 32px;
+  color: #667eea; /* تغییر رنگ به آبی */
+}
+
+.userInfo span {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.userInfo h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: normal;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.actionBar div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actionBar h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 18px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.actionBar button, 
+.selectModeBtn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Vazir', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionBar button:hover, 
+.selectModeBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.selectModeBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #fef3c7;
+}
+
+.selectModeInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.selectModeInfo span {
+  font-weight: 600;
+  color: #78350f;
+  font-size: 16px;
+}
+
+.cancelSelectMode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Vazir', sans-serif;
+}
+
+.cancelSelectMode:hover {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.selectModeActions {
+  display: flex;
+  gap: 12px;
+}
+
+.deleteSelectedBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Vazir', sans-serif;
+}
+
+.deleteSelectedBtn:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.deleteSelectedBtn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.table th, 
+.table td {
+  padding: 16px;
+  text-align: right;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.checkboxColumn {
+  width: 60px;
+  text-align: center;
+}
+
+.checkboxColumn input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.selectedRow {
+  background-color: #f0f9ff !important;
+}
+
+.idCell {
+  font-family: 'Vazir', monospace;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.table td svg {
+  margin-left: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.table td svg:hover {
+  transform: scale(1.2);
+}
+
+.table td svg:first-child {
+  color: #667eea;
+}
+
+.table td svg:last-child {
+  color: #ef4444;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 8px;
+}
+
+.pageNumber {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Vazir', sans-serif;
+  font-size: 14px;
+}
+
+.pageNumber:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.pageNumber.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 48px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.emptyState p {
+  margin: 0 0 20px 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.addBtn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Vazir', sans-serif;
+}
+
+.addBtn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .topBar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .searchBox {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .userInfo {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .userDivider {
+    display: none;
+  }
+  
+  .actionBar, 
+  .selectModeBar {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .actionButtons, 
+  .selectModeActions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .actionBar button, 
+  .selectModeBtn,
+  .deleteSelectedBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .table {
+    display: block;
+    overflow-x: auto;
+    font-size: 14px;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 12px;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+  }
+  
+  .pageNumber {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .emptyState {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .actionBar h2 {
+    font-size: 16px;
+  }
+  
+  .selectModeInfo {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .selectModeInfo span {
+    font-size: 14px;
+  }
+  
+  .table {
+    font-size: 13px;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 10px 8px;
+  }
+  
+  .checkboxColumn {
+    width: 50px;
+  }
+}
